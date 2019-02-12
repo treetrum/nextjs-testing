@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import GetPrismicAPI from '../PrismicAPI'
-import Prismic from 'prismic-javascript'
+import PrismicAPI from '../PrismicAPI'
 
 const IndexPage = ({response}) => {
 	return (
@@ -20,8 +19,7 @@ const IndexPage = ({response}) => {
 }
 
 IndexPage.getInitialProps = async () => {
-	const api = await GetPrismicAPI();
-	const response = await api.query(Prismic.Predicates.at('document.type', 'post'))
+	const response = await PrismicAPI.getPosts();
 	return { response };
 }
 

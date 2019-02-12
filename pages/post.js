@@ -1,6 +1,5 @@
-import GetPrismicAPI from '../PrismicAPI'
-import Prismic from 'prismic-javascript'
 import PrismicDOM from 'prismic-dom';
+import PrismicAPI from '../PrismicAPI'
 
 const BlogPost = ({response}) => {
 	return (
@@ -13,8 +12,7 @@ const BlogPost = ({response}) => {
 
 BlogPost.getInitialProps = async (context) => {
 	const { uid } = context.query;
-	const api = await GetPrismicAPI();
-	const response = await api.getByUID('post', uid)
+	const response = await PrismicAPI.getPostByUID(uid);
 	return {response};
 }
 
