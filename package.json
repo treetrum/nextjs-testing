@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "next": "^8.0.0",
+    "prismic-dom": "^2.1.0",
+    "prismic-javascript": "^2.0.1",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1"
+  },
+  "name": "nextjs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "dev": "next dev",
+    "start": "next start",
+    "build": "next build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
